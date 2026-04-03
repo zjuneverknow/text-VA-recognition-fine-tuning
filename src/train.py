@@ -105,6 +105,8 @@ def build_training_arguments(args: argparse.Namespace) -> TrainingArguments:
         fp16=False,
         eval_strategy="steps",
         save_strategy="steps",
+        save_total_limit=2,
+        save_only_model=True,
         logging_strategy="steps",
         load_best_model_at_end=True,
         metric_for_best_model="ccc",
